@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Custom Properties */
+
+:root {
+    /*************************** Page-wide variables ****************************/
+    /* Base spacing unit. */
+    --spacing-unit: 6px;
+    /* Margin size. No unit, because it's a multiple of the spacing unit. */
+    --margins: 2;
+    /* Colors. */
+    --primary-color: #5E35B1;
+    --primary-color-text: #FFF;
+    /* Fonts. */
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    /* Number of columns to show. */
+    --grid-columns: 3;
+    /***************************** Calculated values ****************************/
+    /* We don't use calc here because we don't want to resolve the values yet.
+     You can think of these as simple textual replacements. */
+    /* The size of the margin around the card grid. */
+    --margin-size: (var(--margins) * 2);
+    /* How much internal padding each cell should have */
+    --cell-padding: (4 * var(--spacing-unit));
+    /* How big the space between cells should be */
+    --grid-gutter: (var(--margins) * var(--spacing-unit));
+    /* How big the space should be around the grid */
+    --grid-margin: (var(--margin-size) * var(--spacing-unit));
+    /* Calculated cell margin */
+    --cell-margin: (var(--grid-gutter) / 2);
+}
+
+
+/* General Styles */
+
+body {
+    font-family: var(--ff-primary);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+header {
+    background-color: #8AA6A3;
+}
+
+.pfp {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 25%;
+    border-radius: 50%;
+    border-color: #10403B;
+    border-width: 10px;
+}
+
+.nav {
+    float: right;
+}
