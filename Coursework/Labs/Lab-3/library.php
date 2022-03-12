@@ -87,6 +87,7 @@ class Shape
 {
     function draw()
     {
+        return null;
     }
 }
 class Circle extends Shape
@@ -164,7 +165,9 @@ function sum3x()
     $fd = fopen("sum3x.txt", "a+");
     $a = fread($fd, 8);
     $b = fread($fd, 8);
-    if ($a == $b) return fwrite($fd, "\n" . (3 * ($a + $b)));
+    if ($a == $b) {
+        return fwrite($fd, "\n" . (3 * ($a + $b)));
+    }
     fwrite($fd, $a + $b);
 }
 
@@ -178,8 +181,9 @@ function pattern()
     $fd = fopen("pattern.txt", "a+");
     $n = fread($fd, 4);
     for ($i = 0; $i <= $n; $i++) {
-        for ($j = 0; $j <= $i; $j++)
+        for ($j = 0; $j <= $i; $j++) {
             fwrite($fd, "*" . "\t");
+        }
         fwrite($fd, "\n");
     }
     fclose($fd);
@@ -189,8 +193,9 @@ function multTable()
 {
     $fd = fopen("multiplication.txt", "a");
     for ($i = 1; $i <= 6; $i++) {
-        for ($j = 1; $j <= 6; $j++)
+        for ($j = 1; $j <= 6; $j++) {
             fwrite($fd, ($i * $j) . "\t");
+        }
         fwrite($fd, "\n");
     }
     fclose($fd);
