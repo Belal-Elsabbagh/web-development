@@ -15,5 +15,14 @@ set_error_handler("customError");
 trigger_error
 (
   $error_message,
-  $error_level, 
+  $error_level
+);
+
+/*** error logging ***/
+error_log
+(
+  $error_message, // THe message to be sent
+  $error_level, // The error level
+  $destination, // Where the error will be recorded
+  $additional_headers
 );
