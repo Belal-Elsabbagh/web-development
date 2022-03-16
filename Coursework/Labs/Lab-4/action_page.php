@@ -30,6 +30,6 @@ function insert_entry()
     $mysqli->close();
 }
 
-if($_POST['password'] != $_POST['confirm_password']) die("Passwords do not match");
+if($_POST['password'] != $_POST['confirm_password']){ die("Passwords do not match"); }
 
 insert_entry();
