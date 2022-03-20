@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function printHere() {
+            document.write("Inline Javascript printing<br>");
+            console.log("printHere done.");
+        }
+    </script>
+    <script type="text/javascript" src="JavaScript-intro.js"></script>
+    <title>Intro to Javascript</title>
+</head>
+
+<body>
+    <!-- Wriing Javascript in HTML -->
+    <ul>
+        <li>
+            <script>
+                printHere();
+            </script>
+        </li>
+        <li>
+            <script>
+                printFromJS();
+            </script>
+        </li>
+        <li>
+            <script>
+                DocObjModel();
+            </script>
+        </li>
+    </ul>
+    <a id="mylink" href="https://www.booking.com">MIU</a>
+    <!-- Prints if Javascript does not work on the running client -->
+    <noscript>
+    Javascript doesn't work here :(
+  </noscript>
+</body>
+
+</html>
