@@ -1,14 +1,6 @@
 <?php
 session_start();
-// $_SESSION["fname"] = $_POST["fname"];
-// $_SESSION["lname"] = $_POST["lname"];
-// $_SESSION["address"] = $_POST["address"];
-// $_SESSION["course"] = $_POST["course"];
 
-// echo "First name: ".$_SESSION["fname"]."<br>";
-// echo "Last name: ".$_SESSION["lname"]."<br>";
-// echo "Address: ".$_SESSION["address"]."<br>";
-// echo "Course: ".$_SESSION["course"]."<br>";
 function insert_entry()
 {
     $mysqli = new mysqli("localhost", "root", "", "lab4");
