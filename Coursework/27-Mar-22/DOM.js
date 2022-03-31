@@ -1,9 +1,17 @@
 let element;
 
-/*** unique for each html element. Returns HTML element. Returns null if not found. ***/
+/***
+ * unique for each html element.
+ * Returns HTML element.
+ * Returns null if not found.
+ * ***/
 element = document.getElementById('value');
 
-/*** NOT unique for each html element. Returns element list of all elements. Returns null if not found. ***/
+/***
+ * NOT unique for each html element.
+ * Returns element list of all elements.
+ * Returns null if not found.
+ * ***/
 element = document.getElementsByName('value');
 
 /*** sets an attribute for an element. ***/
@@ -23,11 +31,19 @@ document.body.appendChild(div);
 
 /*** Document Fragment Interface ***/
 
-/*** Events ***/
+/*** Events
+ *      DOMContentLoaded
+ *      load
+ *      beforeunload
+ *      unload
+ * ***/
+/*** Adding event listeners ***/
 element.setAttribute('onmouselick', 'eventFunction()');
-let btn = document.getElementById('button_id');
-element.addEventListener(btn);
 
 function eventFunction() {
     alert("It was clicked");
 }
+let btn = document.getElementById('button_id');
+element.addEventListener(btn, () => {
+    alert("It was clicked");
+});
