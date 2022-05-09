@@ -1,0 +1,30 @@
+body {
+    background-color: yellow;
+    font-size: large;
+}
+
+h1 {
+    color: lightblue;
+    text-shadow: 2px 2px white;
+    background-color: green;
+    border: 5px solid lightblue;
+    font-size: xx-large;
+}
+
+ol {
+    color: yellow;
+    background-color: coral;
+    border: 5px dotted lightblue;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    color: yellow;
+    background-color: magenta;
+    border: 5px double white;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

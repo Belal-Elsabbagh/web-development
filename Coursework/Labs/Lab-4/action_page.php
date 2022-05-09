@@ -3,19 +3,12 @@ session_start();
 
 function insert_entry()
 {
-    $mysqli = new mysqli("localhost", "root", "", "lab4");
-    
-    if($mysqli === false)
-    {
-        die("ERROR: Could not connect. " . $mysqli->connect_error);
-        return;
-    }
-    
+    $mysqli = new mysqli("localhost", "root", "", "lab4") or die("ERROR: Could not connect. " . $mysqli->connect_error);
+       
     $sql = "INSERT INTO users (`name`, `password`) VALUES ({$_POST['name']}, {$_POST['password']});";
     if($mysqli->query($sql) === false)
     {
         die("ERROR: Could not able to execute $sql. " . $mysqli->error);
-        return;
     }
     echo "Query successful";
     

@@ -1,0 +1,15 @@
+table,
+th,
+td {
+    border: 1px solid blue;
+}
+
+th {
+    background-color: yellow;
+    color: green;
+}
+
+td {
+    background-color: gainsboro;
+    color: red;
+}
